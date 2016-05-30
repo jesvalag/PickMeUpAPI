@@ -20,6 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/docs/', include('rest_framework_swagger.urls')),
     url(r'^api/passenger/', include('passengers.urls', namespace='passengers')),
+    url(r'^api/routes/', include('routes.urls', namespace='routes')),
 ]
-
-#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

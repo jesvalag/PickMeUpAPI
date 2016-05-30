@@ -7,6 +7,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 class Passenger(AbstractUser):
     skype_id = models.CharField(max_length=200, null=True, blank=True)
+    cellphone = models.IntegerField(null=True, blank=True)
 
     class Meta:
         ordering = ['first_name', 'last_name', 'username']

@@ -7,7 +7,16 @@ class PassengerListSerializer(serializers.ModelSerializer):
         model = Passenger
         fields = ('pk',
                   'username',
-                  'email',
+                  'first_name',
+                  'last_name')
+
+class PassengerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Passenger
+        fields = ('pk',
+                  'username',
                   'first_name',
                   'last_name',
-                  'skype_id')
+                  'email',
+                  'skype_id',
+                  'cellphone')

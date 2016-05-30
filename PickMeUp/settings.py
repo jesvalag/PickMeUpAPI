@@ -35,14 +35,15 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
-    'corsheaders',
+    #'corsheaders',
     'passengers',
+    'routes',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -54,6 +55,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'PickMeUp.urls'
