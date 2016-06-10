@@ -10,7 +10,7 @@ class Route(models.Model):
     departure = models.CharField(max_length=100)
     arrival = models.CharField(max_length=100)
     comments = models.CharField(max_length=200, null=True, blank=True)
-    passenger = models.ManyToManyField(Passenger)
+    passengers = models.ManyToManyField(Passenger)
 
     def __str__(self):
         return self.name
