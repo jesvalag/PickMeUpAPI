@@ -12,6 +12,7 @@ whitenoise==2.0.6
 gunicorn==19.4.5
 psycopg2==2.6.1
 whitenoise==2.0.6
+dj-database-url==0.4.0
 
 #Pillow==3.1.1
 #djoser==0.4.3
