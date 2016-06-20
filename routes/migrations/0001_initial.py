@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('departure', models.CharField(max_length=100)),
                 ('arrival', models.CharField(max_length=100)),
                 ('comments', models.CharField(blank=True, max_length=200, null=True)),
-                ('passenger', models.ManyToManyField(to=settings.AUTH_USER_MODEL)),
+                ('passengers', models.ManyToManyField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['departure', 'arrival'],

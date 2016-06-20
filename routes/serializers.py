@@ -9,7 +9,8 @@ class RouteListSerializer(serializers.ModelSerializer):
         fields = ('pk',
                   'departure',
                   'arrival',
-                  'passengers')
+                  'sits',
+                  'contact')
 
 
 class RouteSerializer(serializers.ModelSerializer):
@@ -19,4 +20,6 @@ class RouteSerializer(serializers.ModelSerializer):
                   'departure',
                   'arrival',
                   'comments',
+                  'sits',
+                  'contact',
                   'passengers')

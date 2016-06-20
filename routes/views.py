@@ -80,7 +80,20 @@ def route_add_new(request):
     """
     if request.method == 'POST':
         errors = []
-        serializer = RouteSerializer(data=request.data)
+        passengers = []
+        departure_value = (request.data['departure'])
+        arrival_value = (request.data['arrival'])
+        comments_value = (request.data['comments'] if 'comments' in request.data.keys() else None)
+        contact = get_object_or_404(Passenger, pk=request.data['contact'])
+        passengers.append(contact.id)
+        sits_value = (request.data['sits'] if 'sits' in request.data.keys() else 1)
+        data = {"departure": departure_value,
+                "arrival": arrival_value,
+                "comments": comments_value,
+                "sits": sits_value,
+                "contact": contact.id,
+                "passengers": passengers}
+        serializer = RouteSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             content = {'detail': 'Successful route added'}
